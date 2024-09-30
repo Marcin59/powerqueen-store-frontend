@@ -4,6 +4,7 @@ import { listRegions } from "@lib/data"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
+import Image from 'next/image'
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
@@ -24,7 +25,12 @@ export default async function Nav() {
               className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
               data-testid="nav-store-link"
             >
-              Medusa Store
+              <Image
+                src="/images/Power_Queen_Logo.png"
+                alt="Power Queen Logo"
+                width={150}
+                height={50}
+              />
             </LocalizedClientLink>
           </div>
 
