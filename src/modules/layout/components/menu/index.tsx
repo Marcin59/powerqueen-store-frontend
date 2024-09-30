@@ -4,7 +4,6 @@ import { Box, Typography } from "@mui/material"
 const SideMenuItems = {
     'O nas': "/",
     Sklep: "/store",
-    Szukaj: "/search",
     Konto: "/account",
     Koszyk: "/cart",
 }
