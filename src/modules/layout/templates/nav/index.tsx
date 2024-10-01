@@ -19,9 +19,9 @@ export default async function Nav() {
         <nav className="txt-xsmall-plus text-ui-fg-subtle w-full h-full text-small-regular">
           <div className="h-16 flex w-full flex-wrap pr-20 pl-20">
             <div className="flex-1 basis-0 h-full flex items-center">
-              <div className="h-full">
+              {/* <div className="h-full">
                 <SideMenu regions={regions} />
-              </div>
+              </div> */}
             </div>
 
             <div className="flex items-center h-full">

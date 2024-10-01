@@ -58,6 +58,9 @@ module.exports = {
       fontSize: {
         "3xl": "2rem",
       },
+      flexGrow: {
+        2: '2'
+      },
       fontFamily: {
         sans: [
           "Inter",
