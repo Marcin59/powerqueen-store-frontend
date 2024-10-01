@@ -28,7 +28,7 @@ const nextConfig = withStoreConfig({
       },
       {
         protocol: "https", // or https
-        hostname:"https://powerqueen-store-backend-ebcddb895514.herokuapp.com",
+        hostname:"powerqueen-store-backend-ebcddb895514.herokuapp.com",
       },
     ],
   },
