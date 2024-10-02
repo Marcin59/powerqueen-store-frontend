@@ -15,13 +15,13 @@ export default async function Nav() {
 
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
-      <header className="relative h-24 mx-auto border-b duration-200 bg-white border-ui-border-base">
+      <header className="relative flex mx-auto border-b duration-200 bg-white border-ui-border-base">
         <nav className="txt-xsmall-plus text-ui-fg-subtle w-full h-full text-small-regular">
           <div className="h-16 flex w-full flex-wrap pr-20 pl-20">
             <div className="flex-1 basis-0 h-full flex items-center">
-              {/* <div className="h-full">
+              <div className="h-full lg:invisible">
                 <SideMenu regions={regions} />
-              </div> */}
+              </div>
             </div>
 
             <div className="flex items-center h-full">
@@ -74,7 +74,7 @@ export default async function Nav() {
               </Suspense>
             </div>
           </div>
-          <div className="h-8 flex w-full bg-yellow-500">
+          <div className="h-8 flex w-full bg-yellow-500 small:block hidden">
             <Menu/>
           </div>
         </nav>

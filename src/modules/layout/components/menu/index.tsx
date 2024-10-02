@@ -1,28 +1,42 @@
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import { Box, Typography } from "@mui/material"
+import { Box, Paper, Typography } from "@mui/material"
+import { Suspense } from "react"
+import MenuDropdown from "../menu-dropdown"
 
-const SideMenuItems = {
-    'O nas': "/",
-    Sklep: "/store",
-    Konto: "/account",
-    Koszyk: "/cart",
-}
+
+const menuItems = [
+    {name: 'O nas', href: "/"},
+    {name: 'Sklep', href: "/store"},
+    {name: 'Konto', href: "/account"},
+    {name: 'Koszyk', href: "/cart"},
+]
 
 const Menu = () => {
+
     return (
         <div className="flex gap-10 justify-center w-full h-full align-content-center">
-            {Object.entries(SideMenuItems).map(([name, href]) => {
+            {menuItems.map(({name, href}) => {
                         return (
-                            <LocalizedClientLink
+                            <Suspense 
                                 key={name}
-                                href={href}
-                                className="text-white leading-10 hover:text-ui-fg-disabled place-content-center"
-                                data-testid={`${name.toLowerCase()}-link`}
-                            >
-                                <Typography>
-                                    {name}
-                                </Typography>
-                            </LocalizedClientLink>
+                                fallback={
+                                    <LocalizedClientLink
+                                        key={name}
+                                        href={href}
+                                        className="text-white leading-10 hover:text-ui-fg-disabled place-content-center"
+                                        data-testid={`${name.toLowerCase()}-link`}
+                                    >
+                                        <Typography>
+                                            {name}
+                                        </Typography>
+                                    </LocalizedClientLink>}>
+                                <MenuDropdown 
+                                    name={name}
+                                    href={href}>
+                                    <Paper className="w-[500px] h-[300px] bg-yellow-500">
+                                    </Paper>
+                                </MenuDropdown>
+                            </Suspense>
                         )
                       })}
         </div>
