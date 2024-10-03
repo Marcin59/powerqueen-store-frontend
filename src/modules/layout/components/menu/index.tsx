@@ -1,44 +1,73 @@
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import { Box, Paper, Typography } from "@mui/material"
-import { Suspense } from "react"
+import { Suspense, useMemo } from "react"
 import MenuDropdown from "../menu-dropdown"
+import ShopDropdownContent from "./components/shop-dropdown-content"
 
 
 const menuItems = [
-    {name: 'O nas', href: "/"},
-    {name: 'Sklep', href: "/store"},
-    {name: 'Konto', href: "/account"},
-    {name: 'Koszyk', href: "/cart"},
+    {name: 'O nas', href: "/",
+        DropdownContext: () => {
+            return(
+                <Paper className="hidden"/>
+            )
+        }
+    },
+    {name: 'Sklep', href: "/store",
+        DropdownContext: () => {
+            return(
+                <ShopDropdownContent/>
+            )
+        }},
+    {name: 'Konto', href: "/account",
+        DropdownContext: () => {
+            return(
+                <Paper className="hidden"/>
+            )
+        }},
+    {name: 'Koszyk', href: "/cart",
+        DropdownContext: () => {
+            return(
+                <Paper className="hidden"/>
+            )
+        }},
 ]
 
 const Menu = () => {
 
     return (
         <div className="flex gap-10 justify-center w-full h-full align-content-center">
-            {menuItems.map(({name, href}) => {
+            {menuItems.map(({name, href, DropdownContext}) => {
+
+                    const MenuItem = () => {
                         return (
-                            <Suspense 
+                            <LocalizedClientLink
                                 key={name}
-                                fallback={
-                                    <LocalizedClientLink
-                                        key={name}
-                                        href={href}
-                                        className="text-white leading-10 hover:text-ui-fg-disabled place-content-center"
-                                        data-testid={`${name.toLowerCase()}-link`}
-                                    >
-                                        <Typography>
-                                            {name}
-                                        </Typography>
-                                    </LocalizedClientLink>}>
-                                <MenuDropdown 
-                                    name={name}
-                                    href={href}>
-                                    <Paper className="w-[500px] h-[300px] bg-yellow-500">
-                                    </Paper>
-                                </MenuDropdown>
-                            </Suspense>
+                                href={href}
+                                className="text-white leading-10 hover:text-ui-fg-disabled place-content-center"
+                                data-testid={`${name.toLowerCase()}-link`}
+                            >
+                                <Typography>
+                                    {name}
+                                </Typography>
+                            </LocalizedClientLink>
                         )
-                      })}
+                    }
+
+                    return (
+                        <Suspense 
+                            key={name}
+                            fallback={
+                                <MenuItem/>}>
+                            <MenuDropdown 
+                                name={name}
+                                href={href}
+                                menuItem={<MenuItem/>}>
+                                <DropdownContext/>
+                            </MenuDropdown>
+                        </Suspense>
+                    )
+                    })}
         </div>
     )
 }

@@ -7,10 +7,10 @@ import { PropsWithChildren, useState } from "react";
 interface MenuDropdownProps {
     name: string;
     href: string;
-}
+    menuItem: React.ReactElement;}
 
 const MenuDropdown = ({
-    children, name, href
+    children, name, href, menuItem
 }: PropsWithChildren<MenuDropdownProps>) => {
     
 const [cartDropdownOpen, setCartDropdownOpen] = useState(false)
@@ -24,16 +24,7 @@ return (
     >
         <Popover className="h-full">
             <Popover.Button className="h-full">
-                <LocalizedClientLink
-                    key={name}
-                    href={href}
-                    className="text-white leading-10 hover:text-ui-fg-disabled place-content-center h-full"
-                    data-testid={`${name.toLowerCase()}-link`}
-                >
-                    <Typography>
-                        {name}
-                    </Typography>
-                </LocalizedClientLink>
+                {menuItem}
             </Popover.Button>
             <Transition
                 show={cartDropdownOpen}
