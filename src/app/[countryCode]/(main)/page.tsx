@@ -6,6 +6,8 @@ import FeaturedProducts from "@modules/home/components/featured-products"
 // import Hero from "@modules/home/components/hero"
 import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
+import DescriptionsWithGraphic from "@modules/home/components/descriptions-with-graphic"
+import Badges from "@modules/home/components/Badges"
 
 export const metadata: Metadata = {
   title: "Medusa Next.js Starter Template",
@@ -71,7 +73,8 @@ export default async function Home({
       {/* <Hero /> */}
       <div className="py-0">
         <ul className="flex flex-col gap-x-6">
-          <FeaturedProducts collections={collections} region={region} />
+          <DescriptionsWithGraphic />
+          <Badges />
         </ul>
       </div>
     </>

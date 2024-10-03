@@ -15,7 +15,6 @@ const ShopDropdownContent = async () => {
     return(
         <Paper className="w-[500px] h-[200px] bg-yellow-500 grid grid-cols-2">
             {product_categories && product_categories.map((category: ProductCategoryWithChildren) => {
-                console.log(product_categories)
                 return(
                     <CategoryCol key={category.id} category={category}/>
                 )
