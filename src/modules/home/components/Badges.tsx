@@ -5,19 +5,19 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
 const items = [{
         title: "Profesjonalny zespół",
-        icon: <GroupIcon className='text-[70px]'/>,
+        icon: <GroupIcon  sx={{ fontSize: 70 }}/>,
         description: "Power Queen - założona przez ekspertów od akumulatorów LiFePO4"
     },{
         title: "5 lat gwarancji",
-        icon: <GppGoodIcon className='text-[70px]'/>,
+        icon: <GppGoodIcon sx={{ fontSize: 70 }}/>,
         description: "Oferujemy 5-letnią gwarancję i wymianę uszkodzonych akumulatorów."
     },{
         title: "Darmowa wysyłka",
-        icon: <LocalShippingIcon className='text-[70px]'/>,
+        icon: <LocalShippingIcon sx={{ fontSize: 70 }}/>,
         description: "2-4 dni robocze w DE i 3-7 dni robocze w UE za pośrednictwem DPD/UPS."
     },{
         title: "Całodobowa obsługa klienta",
-        icon: <AccessTimeIcon className='text-[70px]'/>,
+        icon: <AccessTimeIcon sx={{ fontSize: 70 }}/>,
         description: "Rozwiązanie problemu w ciągu 12-24 godzin (czat online lub e-mail)"
     }
 
