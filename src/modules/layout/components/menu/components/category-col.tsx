@@ -25,7 +25,7 @@ const CategoryCol = async ({ category }: CategoryColProps) => {
         <div className="flex flex-col flex-wrap gap-y-[15px] m-5">
             <LocalizedClientLink
                 href={`/categories/${category.handle}`}
-                className="hover:text-ui-fg-disabled text-lg"
+                className="hover:text-ui-fg-disabled text-lg font-bold"
             >
                 {category.name}
             </LocalizedClientLink>
@@ -35,7 +35,7 @@ const CategoryCol = async ({ category }: CategoryColProps) => {
                         <LocalizedClientLink
                             key={product.id}
                             href={`/products/${product.handle}`}
-                            className="hover:text-ui-fg-disabled text-xs"
+                            className="hover:text-ui-fg-disabled text-base"
                         >
                             {product.title}
                         </LocalizedClientLink>
