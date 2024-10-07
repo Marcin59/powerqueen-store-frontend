@@ -21,14 +21,14 @@ export default function DescriptionsWithGraphic() {
     <div>
       {items.map((item, index) => {
         const Graphic = () => {
-          return <div className="flex flex-col items-center place-content-center bg-yellow-500 h-[50vh]"> PLACEHOLDER </div>
+          return <div className="flex flex-col items-center place-content-center bg-ui-fg-base h-[50vh]"> PLACEHOLDER </div>
         }
         const Description = () => {
           return (
             <div className="flex flex-col items-center gap-y-5 place-content-center m-5 m-y-10">
               <h3 className="text-2xl font-bold text-center">{item.Title}</h3>
               <p className="text-lg text-center">{item.Description}</p>
-              <a href={item.href} className="text-lg text-center text-yellow-500">Zobacz więcej</a>
+              <a href={item.href} className="text-lg text-center text-ui-primary-main">Zobacz więcej</a>
             </div>
           )
         }

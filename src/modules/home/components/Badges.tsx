@@ -31,7 +31,7 @@ export default function Badges() {
                     <div key={index} className="flex flex-col items-center gap-y-8 place-content-center m-10 max-w-[300px]">
                         {item.icon}
                         <div className='gap-y-3 flex flex-col'>
-                            <h3 className="text-2xl font-bold text-center text-yellow-500">{item.title}</h3>
+                            <h3 className="text-2xl font-bold text-center text-ui-primary-main">{item.title}</h3>
                             <p className="text-lg text-center">{item.description}</p>
                         </div>
                     </div>

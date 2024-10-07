@@ -1,3 +1,4 @@
+const { light, dark } = require("@mui/material/styles/createPalette")
 const path = require("path")
 
 module.exports = {
@@ -34,6 +35,22 @@ module.exports = {
           80: "#1F2937",
           90: "#111827",
         },
+        ui:{
+          primary: {
+            main: "#c79c1c",
+            light: "#F3F4F6",
+            dark: "#1F2937",
+          },
+          bg: {
+            base: "#FFFFFF",
+          },
+          fg:{
+            base: "#c79c1c",
+          },
+          action: {
+            hover: "rgba(255, 255, 255, 0.5)"
+          },
+        }
       },
       borderRadius: {
         none: "0px",
