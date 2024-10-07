@@ -3,6 +3,7 @@ import { Box, Paper, Typography } from "@mui/material"
 import { Suspense, useMemo } from "react"
 import MenuDropdown from "../menu-dropdown"
 import ShopDropdownContent from "./components/shop-dropdown-content"
+import DropdownContentWithCategories from "./components/shop-dropdown-content"
 
 
 const menuItems = [
@@ -13,10 +14,16 @@ const menuItems = [
             )
         }
     },
-    {name: 'Sklep', href: "/store",
+    {name: 'Baterie LeFePO4', href: "/store",
         DropdownContext: () => {
             return(
-                <ShopDropdownContent/>
+                <DropdownContentWithCategories/>
+            )
+        }},
+    {name: 'Akcesoria do akumulatorów', href: "/store",
+        DropdownContext: () => {
+            return(
+                <DropdownContentWithCategories/>
             )
         }},
     {name: 'Konto', href: "/account",

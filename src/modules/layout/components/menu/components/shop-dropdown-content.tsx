@@ -8,7 +8,7 @@ const selected_categories_names = [
     'power-queen-48-v'
 ]
 
-const ShopDropdownContent = async () => {
+const DropdownContentWithCategories = async () => {
 
     const {product_categories} = await getCategoriesList()
 
@@ -23,4 +23,4 @@ const ShopDropdownContent = async () => {
     )
 }
 
-export default ShopDropdownContent;
+export default DropdownContentWithCategories;
