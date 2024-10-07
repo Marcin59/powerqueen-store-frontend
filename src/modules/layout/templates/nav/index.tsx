@@ -74,7 +74,7 @@ export default async function Nav() {
               </Suspense>
             </div>
           </div>
-          <div className="h-8 flex w-full bg-ui-primary-main small:block hidden">
+          <div className="h-8 flex w-full bg-ui-bg-paper small:block hidden">
             <Menu/>
           </div>
         </nav>

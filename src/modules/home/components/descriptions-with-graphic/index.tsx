@@ -21,7 +21,7 @@ export default function DescriptionsWithGraphic() {
     <div>
       {items.map((item, index) => {
         const Graphic = () => {
-          return <div className="flex flex-col items-center place-content-center bg-ui-fg-base h-[50vh]"> PLACEHOLDER </div>
+          return <div className="flex flex-col items-center place-content-center bg-ui-bg-paper h-[50vh]"> PLACEHOLDER </div>
         }
         const Description = () => {
           return (

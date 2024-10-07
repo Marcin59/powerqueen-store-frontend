@@ -43,6 +43,7 @@ module.exports = {
           },
           bg: {
             base: "#FFFFFF",
+            paper: "#c79c1c",
           },
           fg:{
             base: "#c79c1c",

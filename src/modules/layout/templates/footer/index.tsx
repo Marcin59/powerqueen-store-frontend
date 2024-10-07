@@ -132,7 +132,7 @@ export default async function Footer() {
             </div>
           </div>
         </div>
-        <div className="bg-ui-fg-base">
+        <div className="bg-ui-bg-paper">
           <div className="content-container flex w-full py-4 justify-between text-ui-bg-base">
             <Text className="txt-compact-small">
               © {new Date().getFullYear()} PowerQueen Store. All rights reserved.
